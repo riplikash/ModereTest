@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "type": "secrets.user"
+    },
+    "mssql1": {
+      "type": "mssql.local",
+      "connectionId": "LocalDockerDb",
+      "secretStore": "LocalSecretsFile"
+    },
+    "mssql2": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/s3interchange/databases/S3Interchange",
+      "type": "mssql.azure",
+      "connectionId": "AzureSqlServer",
+      "secretStore": "LocalSecretsFile"
+    }
+  }
+}
